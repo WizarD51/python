@@ -1,0 +1,4 @@
+# Проверьте, есть ли среди данных N чисел нули.
+
+n = int(input())
+print(n > sum(1 for _ in zip(range(n), iter(input, '0'))))
