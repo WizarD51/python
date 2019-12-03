@@ -1,4 +1,4 @@
 # Проверьте, есть ли среди данных N чисел нули.
 
-n = int(input())
-print(n > sum(1 for _ in zip(range(n), iter(input, '0'))))
+from itertools import repeat
+print(0 in list(map(lambda r: int(r()), repeat(input, int(input())))))
